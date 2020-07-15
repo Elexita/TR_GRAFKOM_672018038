@@ -46,6 +46,150 @@ void init(void)
 	glPointSize(4.0f);
 	glLineWidth(1.0f);
 }
+void kanankiri(void)
+{
+	//kanan
+	glBegin(GL_QUADS);
+	glColor3f(1.0,1.0,1.0);
+	glVertex3f(-29.0,-24.0,-42.0);
+	glVertex3f(-29.0,24.0,-42.0);
+	glVertex3f(-29.0,24.0,42.0);
+	glVertex3f(-29.0,-24.0,42.0);
+	glEnd();
+	
+
+	//strip 1
+	glBegin(GL_QUADS);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-24.0,24.5);
+	glVertex3f(29.5,16.0,24.5);
+	glVertex3f(29.5,16.0,25.5);
+	glVertex3f(29.5,-24.0,25.5);
+	glEnd();
+
+	//strip 2
+	glBegin(GL_QUADS);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-24.0,6.5);
+	glVertex3f(29.5,16.0,6.5);
+	glVertex3f(29.5,16.0,7.5);
+	glVertex3f(29.5,-24.0,7.5);
+	glEnd();
+
+	//strip 3
+	glBegin(GL_QUADS);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-24.0,-5.5);
+	glVertex3f(29.5,16.0,-5.5);
+	glVertex3f(29.5,16.0,-6.5);
+	glVertex3f(29.5,-24.0,-6.5);
+	glEnd();
+
+	//strip 4
+	glBegin(GL_QUADS);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-24.0,-25.5);
+	glVertex3f(29.5,16.0,-25.5);
+	glVertex3f(29.5,16.0,-26.5);
+	glVertex3f(29.5,-24.0,-26.5);
+	glEnd();
+
+	//kerucut 1
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,35.0);
+	glVertex3f(30.5,-3.0,35.0);
+	glVertex3f(29.5,-3.0,37.0);
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,35.0);
+	glVertex3f(30.5,-3.0,35.0);
+	glVertex3f(29.5,-3.0,33.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,35.0);
+	glVertex3f(30.5,-3.0,35.0);
+	glVertex3f(29.5,-3.0,37.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,35.0);
+	glVertex3f(30.5,-3.0,35.0);
+	glVertex3f(29.5,-3.0,33.0);
+	glEnd();
+
+	//kerucut 2
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,0.0);
+	glVertex3f(30.5,-3.0,0.0);
+	glVertex3f(29.5,-3.0,2.0);
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,0.0);
+	glVertex3f(30.5,-3.0,0.0);
+	glVertex3f(29.5,-3.0,-2.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,0.0);
+	glVertex3f(30.5,-3.0,0.0);
+	glVertex3f(29.5,-3.0,2.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,0.0);
+	glVertex3f(30.5,-3.0,0.0);
+	glVertex3f(29.5,-3.0,-2.0);
+	glEnd();
+
+	//kerucut 3
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,-35.0);
+	glVertex3f(30.5,-3.0,-35.0);
+	glVertex3f(29.5,-3.0,-37.0);
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3f(1,1,1);
+	glVertex3f(29.5,-10.0,-35.0);
+	glVertex3f(30.5,-3.0,-35.0);
+	glVertex3f(29.5,-3.0,-33.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,-35.0);
+	glVertex3f(30.5,-3.0,-35.0);
+	glVertex3f(29.5,-3.0,-37.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0,0,0);
+	glVertex3f(29.5,-10.0,-35.0);
+	glVertex3f(30.5,-3.0,-35.0);
+	glVertex3f(29.5,-3.0,-33.0);
+	glEnd();
+
+	//kiri
+	glBegin(GL_QUADS);
+	glColor3f(1.0,1.0,1.0);
+	glVertex3f(29.0,-24.0,-42.0);
+	glVertex3f(29.0,24.0,-42.0);
+	glVertex3f(29.0,24.0,42.0);
+	glVertex3f(29.0,-24.0,42.0);
+	glEnd();
+}
 
 void tampil(void)
 {
@@ -59,7 +203,8 @@ void tampil(void)
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	else
 	glClear(GL_COLOR_BUFFER_BIT);
-
+	
+	kanankiri();
 	//depan
 	glBegin(GL_QUADS);
 	glColor3f(1.0,1.0,1.0);
