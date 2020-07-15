@@ -22,7 +22,7 @@ int main (int argc, char **argv)
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(800, 600);
 	glutInitWindowPosition(250, 80);
-	glutCreateWindow("Sera Vika Eviana - 672018025");
+	glutCreateWindow("Lotte Dept Store");
 	init();
 	glutMouseFunc(mouse);
 	glutMotionFunc(mouseMotion);
