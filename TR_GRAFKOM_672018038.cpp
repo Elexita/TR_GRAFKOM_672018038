@@ -205,6 +205,7 @@ void tampil(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	
 	kanankiri();
+
 	//depan
 	glBegin(GL_QUADS);
 	glColor3f(1.0,1.0,1.0);
