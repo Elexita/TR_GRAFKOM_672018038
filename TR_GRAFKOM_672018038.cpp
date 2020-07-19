@@ -1229,6 +1229,96 @@ void kanankiri(void)
 
 	glBegin(GL_LINES);
 	glColor3f(0.0, 0.0, 0.0);
+
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -8.0);
+	glVertex3f(-29.1, -24.0, -8.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -12.0);
+	glVertex3f(-29.1, -24.0, -12.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -16.0);
+	glVertex3f(-29.1, -24.0, -16.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -20.0);
+	glVertex3f(-29.1, -24.0, -20.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -24.0);
+	glVertex3f(-29.1, -24.0, -24.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -28.0);
+	glVertex3f(-29.1, -24.0, -28.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -32.0);
+	glVertex3f(-29.1, -24.0, -32.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -36.0);
+	glVertex3f(-29.1, -24.0, -36.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 24.0, -40.0);
+	glVertex3f(-29.1, -24.0, -40.0);
+	glEnd();
+
+	//garis horizontal kiri
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 18.0, 42.0);
+	glVertex3f(-29.1, 18.0, -42.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 10.0, 42.0);
+	glVertex3f(-29.1, 10.0, -42.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, 2.0, 42.0);
+	glVertex3f(-29.1, 2.0, -42.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, -6.0, 42.0);
+	glVertex3f(-29.1, -6.0, -42.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, -14.0, 42.0);
+	glVertex3f(-29.1, -14.0, -42.0);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0, 0.0, 0.0);
+
 	glVertex3f(-29.1, -22.0, 42.0);
 	glVertex3f(-29.1, -22.0, -42.0);
 	glEnd();
@@ -1252,8 +1342,6 @@ void atasbawah(void) {
 	glVertex3f(29.0, -24.0, 42.0);
 	glVertex3f(29.0, -24.0, -42.0);
 	glEnd();
-
-}
 
 void ling(void)
 {
@@ -1287,6 +1375,7 @@ void ling(void)
 	lingkaran(1.0, 100.0, 23.0, -15.0, 42.5);
 	glEnd();
 }
+
 
 void objek(void)
 {
