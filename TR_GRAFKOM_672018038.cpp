@@ -1303,7 +1303,7 @@ void kanankiri(void)
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glColor3f(1.0, 1.0, 1.0);
+	glColor3f(0.5, 0.0, 0.0);
 	glVertex3f(18.0, 35.4, 42.0);
 	glVertex3f(18.0, 35.4, 43.2);
 	glVertex3f(18.0, 26.4, 43.2);
