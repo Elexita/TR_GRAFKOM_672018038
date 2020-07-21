@@ -40,7 +40,7 @@ void init(void)
 {
 	glClearColor(0.4, 1.0, 1.0, 0.0);
 	glMatrixMode(GL_PROJECTION);
-	//glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glEnable(GL_COLOR_MATERIAL);
 	glEnable(GL_LIGHT0);
 	glEnable(GL_DEPTH_TEST);
@@ -2437,6 +2437,70 @@ void atasbawah(void) {
 	glVertex3f(20.0, 8.1, 10.0);
 	glVertex3f(20.0, 8.1, -10.0);
 	glEnd();
+	
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-20.0, 15, 15.0);
+	glVertex3f(-20.0, 15, 33.0);
+	glVertex3f(20.0, 15, 33.0);
+	glVertex3f(20.0, 15, 15.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0, 0, 0);
+	glVertex3f(-20.0, 14.9, -10.0);
+	glVertex3f(-20.0, 14.9, 33.0);
+	glVertex3f(20.0, 14.9, 33.0);
+	glVertex3f(20.0, 14.9, -10.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-20.0, 8.0, -10.0);
+	glVertex3f(-20.0, 15.0, -10.0);
+	glVertex3f(-20.0, 15.0, 33.0);
+	glVertex3f(-20.0, 8.0, 33.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(20.0, 8.0, -10.0);
+	glVertex3f(20.0, 15.0, -10.0);
+	glVertex3f(20.0, 15.0, 33.0);
+	glVertex3f(20.0, 8.0, 33.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-20.0, 8.0, 33.0);
+	glVertex3f(-20.0, 15.0, 33.0);
+	glVertex3f(20.0, 15.0, 33.0);
+	glVertex3f(20.0, 8.0, 33.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-20.0, 8.0, -10.0);
+	glVertex3f(-20.0, 15.0, -10.0);
+	glVertex3f(20.0, 15.0, -10.0);
+	glVertex3f(20.0, 8.0, -10.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1,1,1);
+	glVertex3f(-15.0, 15.1, -5.0);
+	glVertex3f(-15.0, 15.1, 5.0);
+	glVertex3f(15.0, 15.1, 5.0);
+	glVertex3f(15.0, 15.1, -5.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1, 1, 1);
+	glVertex3f(-15.0, 15.1, 20.0);
+	glVertex3f(-15.0, 15.1, 28.0);
+	glVertex3f(15.0, 15.1, 28.0);
+	glVertex3f(15.0, 15.1, 20.0);
+	glEnd();
 
 	//bawah
 	glBegin(GL_QUADS);
@@ -2967,17 +3031,192 @@ void ornamenatas(void) {
 	//3
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(16, 24, 30);
-	glVertex3f(16, 8, 30);
+	glVertex3f(16, 15, 30);
 	glEnd();
 
 	//4
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(21.4, 24, 30);
-	glVertex3f(16, 8, 30);
+	glVertex3f(16, 15, 30);
 	glEnd();
 }
 
+void objekben(void) {
+	//rak
+	glBegin(GL_QUADS);
+	glColor3f(0.585, 0.292, 0.0);
+	glVertex3f(28.9, -23.9, -41.9);
+	glVertex3f(24.1, -23.9, -41.9);
+	glVertex3f(24.1, -23.9, -30.0);
+	glVertex3f(28.9, -23.9, -30.0);
+	glEnd();
 
+	glBegin(GL_QUADS);
+	glVertex3f(24.1, -23.9, -41.9);
+	glVertex3f(24.1, -5, -41.9);
+	glVertex3f(29.0, -5, -41.9);
+	glVertex3f(29.0, -23.9, -41.9);
+	glEnd();	
+
+	glBegin(GL_QUADS);
+	glVertex3f(24.1, -23.9, -30);
+	glVertex3f(24.1, -5, -30);
+	glVertex3f(29.0, -5, -30);
+	glVertex3f(29.0, -23.9, -30);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glVertex3f(24.1, -23.9, -30);
+	glVertex3f(24.1, -5, -30);
+	glVertex3f(29.0, -5, -30);
+	glVertex3f(29.0, -23.9, -30);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(28.9, -5, -41.9);
+	glVertex3f(24.1, -5, -41.9);
+	glVertex3f(24.1, -5, -30.0);
+	glVertex3f(28.9, -5, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(24.1, -24.0, -42.0);
+	glVertex3f(24.1, -20, -42.0);
+	glVertex3f(24.1, -20, -30.0);
+	glVertex3f(24.1, -24.0, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(28.9, -24.0, -42.0);
+	glVertex3f(28.9, -20, -42.0);
+	glVertex3f(28.9, -20, -30.0);
+	glVertex3f(28.9, -24.0, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(28.9, -24.0, -42.0);
+	glVertex3f(28.9, -5, -42.0);
+	glVertex3f(28.9, -5, -30.0);
+	glVertex3f(28.9, -24.0, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 0.5, 0);
+	glVertex3f(28.9, -15, -41.9);
+	glVertex3f(24.0, -20, -41.9);
+	glVertex3f(24.0, -20, -30.0);
+	glVertex3f(28.9, -15, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(28.9, -10, -41.9);
+	glVertex3f(24.0, -15, -41.9);
+	glVertex3f(24.0, -15, -30.0);
+	glVertex3f(28.9, -10, -30.0);
+	glEnd();
+
+
+	//tv gantung
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+	glVertex3f(4.9, -6, -9.0);
+	glVertex3f(4.9, -14, -9.0);
+	glVertex3f(4.9, -14, -1.0);
+	glVertex3f(4.9, -6, -1.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0, 0, 0);
+	glVertex3f(4.9, -6, -9.0);
+	glVertex3f(4.9, -14, -9.0);
+	glVertex3f(4.9, -14, -1.0);
+	glVertex3f(4.9, -6, -1.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+	glVertex3f(9.1, -6, -9.0);
+	glVertex3f(9.1, -14, -9.0);
+	glVertex3f(9.1, -14, -1.0);
+	glVertex3f(9.1, -6, -1.0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0, 0, 0);
+	glVertex3f(9.1, -6, -9.0);
+	glVertex3f(9.1, -14, -9.0);
+	glVertex3f(9.1, -14, -1.0);
+	glVertex3f(9.1, -6, -1.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(5, -5, -10.0);
+	glVertex3f(5, -15, -10.0);
+	glVertex3f(5, -15, 0.0);
+	glVertex3f(5, -5, 0.0);
+	glEnd();
+
+
+	glBegin(GL_QUADS);
+	glVertex3f(5, -5, 0.0);
+	glVertex3f(5, -15, 0.0);
+	glVertex3f(9, -15, 0.0);
+	glVertex3f(9, -5, 0.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(5, -5, -10.0);
+	glVertex3f(5, -15, -10.0);
+	glVertex3f(9, -15, -10.0);
+	glVertex3f(9, -5, -10.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(5, -15, -10.0);
+	glVertex3f(9, -15, -10.0);
+	glVertex3f(9, -15, 0);
+	glVertex3f(5, -15, 0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(5, -5, -10.0);
+	glVertex3f(9, -5, -10.0);
+	glVertex3f(9, -5, 0);
+	glVertex3f(5, -5, 0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(9, -5, -10.0);
+	glVertex3f(9, -15, -10.0);
+	glVertex3f(9, -15, 0.0);
+	glVertex3f(9, -5, 0.0);
+	glEnd();
+
+	//tali
+	glBegin(GL_LINE_LOOP);
+	glColor3f(0, 0, 0);
+	glVertex3f(5, -5, -10);
+	glVertex3f(5, -4, -10);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glVertex3f(5, -5, 0);
+	glVertex3f(5, -4, 0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glVertex3f(9, -5, 0);
+	glVertex3f(9, -4, 0);
+	glEnd();
+
+	glBegin(GL_LINE_LOOP);
+	glVertex3f(9, -5, -10);
+	glVertex3f(9, -4, -10);
+	glEnd();
+
+}
 void ling(void)
 {
 	glColor3f(0.0, 0.0, 0.0);
@@ -3192,6 +3431,7 @@ void tampil(void)
 	objek();
 	ling();
 	objekdalemkelv();
+	objekben();
 
 
 
@@ -3294,6 +3534,11 @@ void mouse(int button, int state, int x, int y)
 
 void mouseMotion(int x, int y)
 {
+	glLoadIdentity();
+	gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+	glRotated(xrot, 1.0f, 0.0f, 0.0f);
+	glRotated(yrot, 0.0f, 1.0f, 0.0f);
+
 	if (mouseDown)
 	{
 		yrot = x - xdiff;
