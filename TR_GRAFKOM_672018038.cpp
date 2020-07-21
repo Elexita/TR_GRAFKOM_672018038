@@ -3442,6 +3442,79 @@ void animasi() {
     //perintah animasi
     glPushMatrix();
     glTranslatef(gerak, 0, 0);
+	
+	//L
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(-7.0, -13.0, 42.2);
+	glVertex3f(-7.0, -17.0, 42.2);
+	glVertex3f(-5.0, -17.0, 42.2);
+	glVertex3f(-5.0, -16.5, 42.2);
+	glVertex3f(-6.5, -16.5, 42.2);
+	glVertex3f(-6.5, -13.0, 42.2);
+	glEnd();
+	
+	//O
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(-4.0, -13.0, 42.2);
+	glVertex3f(-4.0, -17.0, 42.2);
+	glVertex3f(-2.0, -17.0, 42.2);
+	glVertex3f(-2.0, -13.0, 42.2);
+	glEnd();
+	
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(-3.5, -13.5, 42.2);
+	glVertex3f(-3.5, -16.5, 42.2);
+	glVertex3f(-2.5, -16.5, 42.2);
+	glVertex3f(-2.5, -13.5, 42.2);
+	glEnd();
+	
+	//T
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(-1.0, -13.0, 42.2);
+	glVertex3f(-1.0, -13.5, 42.2);
+	glVertex3f(-0.5, -13.5, 42.2);
+	glVertex3f(-0.5, -17.0, 42.2);
+	glVertex3f(0.5, -17.0, 42.2);
+	glVertex3f(0.5, -13.5, 42.2);
+	glVertex3f(1.0, -13.5, 42.2);
+	glVertex3f(1.0, -13.0, 42.2);
+	glEnd();
+	
+	//T
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(2.0, -13.0, 42.2);
+	glVertex3f(2.0, -13.5, 42.2);
+	glVertex3f(2.5, -13.5, 42.2);
+	glVertex3f(2.5, -17.0, 42.2);
+	glVertex3f(3.5, -17.0, 42.2);
+	glVertex3f(3.5, -13.5, 42.2);
+	glVertex3f(4.0, -13.5, 42.2);
+	glVertex3f(4.0, -13.0, 42.2);
+	glEnd();
+
+	//E
+	glBegin(GL_LINE_LOOP);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(5.0, -13.0, 42.2);
+	glVertex3f(7.0, -13.0, 42.2);
+	glVertex3f(7.0, -14.0, 42.2);
+	glVertex3f(5.5, -14.0, 42.2);
+	glVertex3f(5.5, -14.5, 42.2);
+	glVertex3f(7.0, -14.5, 42.2);
+	glVertex3f(7.0, -15.5, 42.2);
+	glVertex3f(5.5, -15.5, 42.2);
+	glVertex3f(5.5, -16.0, 42.2);
+	glVertex3f(7.0, -16.0, 42.2);
+	glVertex3f(7.0, -17.0, 42.2);
+	glVertex3f(5.0, -17.0, 42.2);
+	glEnd();
+
+	glPopMatrix();
 }
 void tampil(void)
 {
