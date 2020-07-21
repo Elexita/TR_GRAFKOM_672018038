@@ -1944,10 +1944,58 @@ void kanankiri(void)
 	//putihatas
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
+
 	glVertex3f(14.1, -24.0, 42.2);
 	glVertex3f(14.1, 26.4, 42.2);
 	glVertex3f(17.9, 26.4, 42.2);
 	glVertex3f(17.9, -24.0, 42.2);
+  
+	glVertex3f(14.1, -24.0, 43.2);
+	glVertex3f(14.1, 26.4, 43.2);
+	glVertex3f(17.9, 26.4, 43.2);
+	glVertex3f(17.9, -24.0, 43.2);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(14.0, -24.0, 42.0);
+	glVertex3f(14.0, -24.0, 43.2);
+	glVertex3f(18.0, -24.0, 43.2);
+	glVertex3f(18.0, -24.0, 42.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(14.0, -24.0, 42.0);
+	glVertex3f(14.0, -24.0, 43.2);
+	glVertex3f(14.0, 26.4, 43.2);
+	glVertex3f(14.0, 26.4, 42.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 1.0);
+	glVertex3f(18.0, -24.0, 42.0);
+	glVertex3f(18.0, -24.0, 43.2);
+	glVertex3f(18.0, 26.4, 43.2);
+	glVertex3f(18.0, 26.4, 42.0);
+	glEnd();
+
+	//merahsamping
+	glBegin(GL_QUADS);
+	glColor3f(0.5, 0.0, 0.0);
+	glVertex3f(14.0, 35.4, 42.0);
+	glVertex3f(14.0, 35.4, 43.2);
+	glVertex3f(14.0, 26.4, 43.2);
+	glVertex3f(14.0, 26.4, 42.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.5, 0.0, 0.0);
+	glVertex3f(18.0, 35.4, 42.0);
+	glVertex3f(18.0, 35.4, 43.2);
+	glVertex3f(18.0, 26.4, 43.2);
+	glVertex3f(18.0, 26.4, 42.0);
+
 	glEnd();
 
 	//verticalkotak
