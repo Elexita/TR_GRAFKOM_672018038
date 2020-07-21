@@ -1171,6 +1171,124 @@ void depanbelakang(void)
 	glEnd();
 }
 
+void objekdalemkelv(void)
+{
+	//lantai 2
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+	glVertex3f(1.0, -4.0, -42.0);
+	glVertex3f(1.0, 0.0, -42.0);
+	glVertex3f(1.0, 0.0, 42.0);
+	glVertex3f(1.0, -4.0, 42.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+	glVertex3f(1.0, 0.0, 42.0);
+	glVertex3f(1.0, 0.0, -42.0);
+	glVertex3f(28.5, 0.0, -42.0);
+	glVertex3f(28.5, 0.0, 42.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 1, 1);
+	glVertex3f(1.0, -4.0, 42.0);
+	glVertex3f(1.0, -4.0, -42.0);
+	glVertex3f(28.5, -4.0, -42.0);
+	glVertex3f(28.5, -4.0, 42.0);
+	glEnd();
+
+	//eskalator
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-10.0, -23.0, 18.0);
+	glVertex3f(-10.0, -23.0, 15.0);
+	glVertex3f(1.0, 0.0, 15.0);
+	glVertex3f(1.0, 0.0, 18.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-9.0, -23.0, 18.0);
+	glVertex3f(-9.0, -23.0, 15.0);
+	glVertex3f(2.0, -1.0, 15.0);
+	glVertex3f(2.0,-1.0, 18.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-10.0, -23.0, 18.0);
+	glVertex3f(1.0, 0.0, 18.0);
+	glVertex3f(2.0, -1.0, 18.0);
+	glVertex3f(-9.0, -23.0, 18.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.75, 0.75, 0.75);
+	glVertex3f(-10.0, -23.0, 15.0);
+	glVertex3f(1.0, 0.0, 15.0);
+	glVertex3f(2.0, -1.0, 15.0);
+	glVertex3f(-9.0, -23.0, 15.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-10.0, -21.0, 15.0);
+	glVertex3f(1.0, 2.0, 15.0);
+	glVertex3f(2.0, 1.0, 15.0);
+	glVertex3f(-9.0, -21.0, 15.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-10.0, -21.0, 18.0);
+	glVertex3f(1.0, 2.0, 18.0);
+	glVertex3f(2.0, 1.0, 18.0);
+	glVertex3f(-9.0, -21.0, 18.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(1.0, 1.0, 0.0);
+	glVertex3f(-12.0, -23.0, 22.0);
+	glVertex3f(-12.0, -23.0, 11.0);
+	glVertex3f(-8.0, -23.0, 11.0);
+	glVertex3f(-8.0, -23.0, 22.0);
+	glEnd();
+
+	//meja
+	glBegin(GL_QUADS);
+	glColor3f(0.585, 0.292, 0.0);
+	glVertex3f(-21.9, -21.9, -35.0);
+	glVertex3f(-15.0, -21.9, -35.0);
+	glVertex3f(-15.0, -21.9, -30.0);
+	glVertex3f(-21.9, -21.9, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.585, 0.292, 0.0);
+	glVertex3f(-21.9, -24.0, -35.0);
+	glVertex3f(-21.9, -21.9, -35.0);
+	glVertex3f(-21.9, -21.9, -30.0);
+	glVertex3f(-21.9, -24.0, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.585, 0.292, 0.0);
+	glVertex3f(-21.9, -22.2, -35.0);
+	glVertex3f(-15.0, -22.2, -35.0);
+	glVertex3f(-15.0, -22.2, -30.0);
+	glVertex3f(-21.9, -22.2, -30.0);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3f(0.585, 0.292, 0.0);
+	glVertex3f(-15.0, -24.0, -35.0);
+	glVertex3f(-15.0, -21.9, -35.0);
+	glVertex3f(-15.0, -21.9, -30.0);
+	glVertex3f(-15.0, -24.0, -30.0);
+	glEnd();
+}
+
 void bagiankanan(void)
 {
 	//garis silver horizontal
@@ -3073,6 +3191,7 @@ void tampil(void)
 	ornamenatas();
 	objek();
 	ling();
+	objekdalemkelv();
 
 
 
