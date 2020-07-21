@@ -18,6 +18,10 @@ bool mouseDown = false;
 int is_depth;
 const double PI = 3.141592653589793;
 float titik;
+int i, radius, jumlah_titik, x_tengah, y_tengah, n;
+float angle = 0;
+int gerak = 0;
+bool atas = true;
 
 int main(int argc, char** argv)
 {
@@ -50,6 +54,30 @@ void init(void)
 	glMatrixMode(GL_MODELVIEW);
 	glPointSize(4.0f);
 	glLineWidth(1.0f);
+}
+
+void timer(int t)
+{
+    if (atas) {
+        gerak += 1;
+    }
+    else {
+        gerak -= 1;
+    }
+    if (gerak > 20) {
+        atas = false;
+    }
+    else if (gerak < -20) {
+        atas = true;
+    }
+    glutPostRedisplay();
+
+    /*
+    kecepatan animasi berbanding terbalik
+    semakin besar nilai glutTimerFunc maka akan semakin pelan gerakannya
+    note: angka 50
+    */
+    glutTimerFunc(50, timer, 0);
 }
 
 void lingkaran(float nilai_radius, float total, float koordinatX, float koordinatY, float sumbuZ)
@@ -3410,6 +3438,11 @@ void objek(void)
 	glEnd();
 }
 
+void animasi() {
+    //perintah animasi
+    glPushMatrix();
+    glTranslatef(gerak, 0, 0);
+}
 void tampil(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -3432,8 +3465,7 @@ void tampil(void)
 	ling();
 	objekdalemkelv();
 	objekben();
-
-
+	animasi();
 
 	//glPushMatrix();
 	//glPopMatrix();
