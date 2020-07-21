@@ -9,6 +9,7 @@ void mouseMotion(int x, int y);
 void keyboard(unsigned char, int, int);
 void ukuran(int, int);
 void idle();
+void timer(int value);
 
 float xrot = 0.0f;
 float yrot = 0.0f;
@@ -20,8 +21,26 @@ const double PI = 3.141592653589793;
 float titik;
 int i, radius, jumlah_titik, x_tengah, y_tengah, n;
 float angle = 0;
-int gerak = 0;
+int gerak = 50;
 bool atas = true;
+
+
+
+void init(void)
+{
+	glClearColor(0.4, 1.0, 1.0, 0.0);
+	glMatrixMode(GL_PROJECTION);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_COLOR_MATERIAL);
+	glEnable(GL_LIGHT0);
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+	is_depth = 1;
+	glMatrixMode(GL_MODELVIEW);
+	glPointSize(4.0f);
+	glLineWidth(1.0f);
+}
 
 int main(int argc, char** argv)
 {
@@ -40,44 +59,22 @@ int main(int argc, char** argv)
 	return 0;
 }
 
-void init(void)
+void timer(int value)
 {
-	glClearColor(0.4, 1.0, 1.0, 0.0);
-	glMatrixMode(GL_PROJECTION);
-	glEnable(GL_LIGHTING);
-	glEnable(GL_COLOR_MATERIAL);
-	glEnable(GL_LIGHT0);
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	is_depth = 1;
-	glMatrixMode(GL_MODELVIEW);
-	glPointSize(4.0f);
-	glLineWidth(1.0f);
-}
-
-void timer(int t)
-{
-    if (atas) {
-        gerak += 1;
-    }
-    else {
-        gerak -= 1;
-    }
-    if (gerak > 20) {
-        atas = false;
-    }
-    else if (gerak < -20) {
-        atas = true;
-    }
-    glutPostRedisplay();
-
-    /*
-    kecepatan animasi berbanding terbalik
-    semakin besar nilai glutTimerFunc maka akan semakin pelan gerakannya
-    note: angka 50
-    */
-    glutTimerFunc(50, timer, 0);
+	if (atas) {
+		gerak += 1;
+	}
+	else {
+		gerak -= 1;
+	}
+	if (gerak > 1) {
+		atas = false;
+	}
+	else if (gerak < -1) {
+		atas = true;
+	}
+	glutPostRedisplay();
+	glutTimerFunc(50, timer, 50);
 }
 
 void lingkaran(float nilai_radius, float total, float koordinatX, float koordinatY, float sumbuZ)
@@ -1240,7 +1237,7 @@ void objekdalemkelv(void)
 	glVertex3f(-9.0, -23.0, 18.0);
 	glVertex3f(-9.0, -23.0, 15.0);
 	glVertex3f(2.0, -1.0, 15.0);
-	glVertex3f(2.0,-1.0, 18.0);
+	glVertex3f(2.0, -1.0, 18.0);
 	glEnd();
 
 	glBegin(GL_QUADS);
@@ -2459,13 +2456,13 @@ void atasbawah(void) {
 
 	//lapangan atas
 	glBegin(GL_QUADS);
-	glColor3f(0.07568f, 0.61424f, 0.07568f);
-	glVertex3f(-20.0, 8.1, -10.0);
-	glVertex3f(-20.0, 8.1, 10.0);
-	glVertex3f(20.0, 8.1, 10.0);
-	glVertex3f(20.0, 8.1, -10.0);
+	glColor3f(0.07568, 0.61424, 0.07568);
+	glVertex3f(-20.0, 15, -10.0);
+	glVertex3f(-20.0, 15, 10.0);
+	glVertex3f(20.0, 15, 10.0);
+	glVertex3f(20.0, 15, -10.0);
 	glEnd();
-	
+
 	glBegin(GL_QUADS);
 	glColor3f(0.75, 0.75, 0.75);
 	glVertex3f(-20.0, 15, 15.0);
@@ -2491,7 +2488,6 @@ void atasbawah(void) {
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glColor3f(0.75, 0.75, 0.75);
 	glVertex3f(20.0, 8.0, -10.0);
 	glVertex3f(20.0, 15.0, -10.0);
 	glVertex3f(20.0, 15.0, 33.0);
@@ -2499,7 +2495,6 @@ void atasbawah(void) {
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glColor3f(0.75, 0.75, 0.75);
 	glVertex3f(-20.0, 8.0, 33.0);
 	glVertex3f(-20.0, 15.0, 33.0);
 	glVertex3f(20.0, 15.0, 33.0);
@@ -2507,7 +2502,6 @@ void atasbawah(void) {
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glColor3f(0.75, 0.75, 0.75);
 	glVertex3f(-20.0, 8.0, -10.0);
 	glVertex3f(-20.0, 15.0, -10.0);
 	glVertex3f(20.0, 15.0, -10.0);
@@ -2515,7 +2509,7 @@ void atasbawah(void) {
 	glEnd();
 
 	glBegin(GL_LINE_LOOP);
-	glColor3f(1,1,1);
+	glColor3f(1, 1, 1);
 	glVertex3f(-15.0, 15.1, -5.0);
 	glVertex3f(-15.0, 15.1, 5.0);
 	glVertex3f(15.0, 15.1, 5.0);
@@ -3084,7 +3078,7 @@ void objekben(void) {
 	glVertex3f(24.1, -5, -41.9);
 	glVertex3f(29.0, -5, -41.9);
 	glVertex3f(29.0, -23.9, -41.9);
-	glEnd();	
+	glEnd();
 
 	glBegin(GL_QUADS);
 	glVertex3f(24.1, -23.9, -30);
@@ -3439,10 +3433,10 @@ void objek(void)
 }
 
 void animasi() {
-    //perintah animasi
-    glPushMatrix();
-    glTranslatef(gerak, 0, 0);
-	
+	timer(50);
+	glPushMatrix();
+	glTranslatef(gerak, 0, 0);
+
 	//L
 	glBegin(GL_LINE_LOOP);
 	glColor3f(1.0, 1.0, 1.0);
@@ -3453,7 +3447,7 @@ void animasi() {
 	glVertex3f(-6.5, -16.5, 42.2);
 	glVertex3f(-6.5, -13.0, 42.2);
 	glEnd();
-	
+
 	//O
 	glBegin(GL_LINE_LOOP);
 	glColor3f(1.0, 1.0, 1.0);
@@ -3462,7 +3456,7 @@ void animasi() {
 	glVertex3f(-2.0, -17.0, 42.2);
 	glVertex3f(-2.0, -13.0, 42.2);
 	glEnd();
-	
+
 	glBegin(GL_LINE_LOOP);
 	glColor3f(1.0, 1.0, 1.0);
 	glVertex3f(-3.5, -13.5, 42.2);
@@ -3470,7 +3464,7 @@ void animasi() {
 	glVertex3f(-2.5, -16.5, 42.2);
 	glVertex3f(-2.5, -13.5, 42.2);
 	glEnd();
-	
+
 	//T
 	glBegin(GL_LINE_LOOP);
 	glColor3f(1.0, 1.0, 1.0);
@@ -3483,7 +3477,7 @@ void animasi() {
 	glVertex3f(1.0, -13.5, 42.2);
 	glVertex3f(1.0, -13.0, 42.2);
 	glEnd();
-	
+
 	//T
 	glBegin(GL_LINE_LOOP);
 	glColor3f(1.0, 1.0, 1.0);
@@ -3519,10 +3513,6 @@ void animasi() {
 void tampil(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glLoadIdentity();
-	gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-	glRotated(xrot, 1.0f, 0.0f, 0.0f);
-	glRotated(yrot, 0.0f, 1.0f, 0.0f);
 
 	if (is_depth)
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -3546,8 +3536,7 @@ void tampil(void)
 	glutSwapBuffers();
 }
 
-void keyboard(unsigned char key, int x, int y)
-{
+void keyboard(unsigned char key, int x, int y){
 	switch (key)
 	{
 	case 'w':
@@ -3651,3 +3640,4 @@ void mouseMotion(int x, int y)
 		glutPostRedisplay();
 	}
 }
+
