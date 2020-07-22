@@ -2332,7 +2332,7 @@ void bagiankanan(void)
 void kanankiri(void)
 {
 
-	//kanan
+	//kiri
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
 	glVertex3f(-29.0, -24.0, -42.0);
@@ -2499,7 +2499,7 @@ void kanankiri(void)
 	glVertex3f(29.5, 0.0, -32.0);
 	glEnd();
 
-	//kiri
+	//kanan
 	glBegin(GL_QUADS);
 	glColor3f(1.0, 1.0, 1.0);
 	glVertex3f(29.0, -24.0, -42.0);
@@ -2846,6 +2846,15 @@ void kanankiri(void)
 	glColor3f(0.0, 0.0, 0.0);
 	glVertex3f(-29.1, -18.0, 42.0);
 	glVertex3f(-29.1, -18.0, -42.0);
+	glEnd();
+
+	//kotak hitam kiri
+	glBegin(GL_QUADS);
+	glColor3f(0.0, 0.0, 0.0);
+	glVertex3f(-29.1, -10.0, -28.0);
+	glVertex3f(-29.1, 17.0, -28.0);
+	glVertex3f(-29.1, 17.0, -20.0);
+	glVertex3f(-29.1, -10.0, -20.0);
 	glEnd();
 }
 void atasbawah(void) {
